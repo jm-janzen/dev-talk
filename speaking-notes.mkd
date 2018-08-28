@@ -1,0 +1,57 @@
+#!/bin/jm
+
+# DevTalk 1: \*NIX as an IDE
+
+## References:
+
+    - Original:     https://sanctum.geek.nz/arabesque/series/unix-as-ide/
+    - Markdown fmt: https://github.com/mrzool/unix-as-ide
+    - Discussion:   https://news.ycombinator.com/item?id=12653028
+
+## Intro:  UNIX-like (Linux, et al) philosophy
+
+    1. What does an IDE do ?
+        i.   file management
+        ii.  text editing
+        iii. code compilation / build tools
+        iv.  debugging
+        v.   version control
+        vi.  database
+
+    2. UNIX-like Philosophy
+        i.   Do one (1) thing well; don't extend
+        ii.  Expect O to become another's I - keep it simple
+        iii. Release early, discard clumsiness, rebuild
+        iv.  Use ad-hoc tools, automation, rather than help
+
+## Elaboration: How UNIX-like complements devs
+
+    1. IDEs are often best solution overall (built to reason about source code),
+       but not always. IDEs just use the OS.  If you can use the OS,
+       maybe you could come up with something better!
+
+    2. UNIX-like IDE functionality
+        i.   ls, find, grep, rsync
+        ii.  nano, vim, sed, ed
+        iii. cmake, gcc, make, go build
+        iv.  strace, gdb, several for every language
+        v.   git ...
+        vi.  mysql, psql REPLs
+
+## Examples: Command line!
+
+    3. Chaining I/O - pipes!
+        - `./rando 3 | sort -n -t\: -k2 | awk -F\: '{print $2}' | sed -r 's/^\s([0-9]+)/_\1,/' | grep -f - list.dat | grep -v baz`
+
+    4. Command/Opts you don't know? RTFM!
+        - `git clean -fx`
+            - What does 'clean' mean? What do '-f' and '-x'  mean?
+            - Simply `man git clean` and look them up! (`/ -f` using GNU less)
+
+## Conclusion: re-iterate major points
+
+    1. IDEs good
+    2. UNIX-like OSes also good (but cooler)
+
+## Q&A: please help
+

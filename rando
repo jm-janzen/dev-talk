@@ -1,0 +1,12 @@
+#!/bin/python
+
+import random
+import sys
+
+try:
+    max = int(sys.argv[1])
+except:
+    max = 10
+
+for i in range(max):
+    print(f"[{i+1}/{max}]: {random.randint(i, max**max)}")
